@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Search</title>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        *{
+            background-color: rgb(33, 33, 33);
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .main{
+            box-sizing: border-box;
+            /* margin-top: 50px; */
+            /* margin-left: 50%; */
+            margin-top: 50px;
+        }
+        .form_input_main{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .form_input_main .mainInput{
+            padding-top: 15px;
+            padding-left: 200px;
+            padding-bottom: 15px;
+            padding-right: 200px;
+            border-radius: 20px;
+            border: 1px solid rgb(99, 99, 99);
+            text-align: center;
+        }
+        .submit{
+            font-size: 14px;
+            color: white;
+            margin-top: 15px;
+            padding-right: 30px;
+            padding-left: 30px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            border: 1px solid grey;
+            border-radius: 5px;
+        }
+        .submit:hover{
+            cursor: pointer;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+        }
+        img{
+            margin-left: 43%;
+            padding-top: 12%;
+        }
+    </style>
+    <body>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Normal Search</a></li>
+                <li><a href="advSearch.html">Advanced Search</a></li>
+              </ul>
+        </div>
+        <div class="main">
+            <img src="https://www.google.co.in/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png">
+            <form action="https://www.google.com/search" class="form_input_main" method="get">
+                <input type="text" name="q" class="mainInput">
+                <br>
+                <input type="hidden" name="tbm" value="isch" />
+                <!-- <input type="submit" value="Image Search" class="submit" name="hl=en&tbm=isch&sclient=img"> -->
+            </form>
+        </div>
+    </body>
+</html>

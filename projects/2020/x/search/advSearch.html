@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Search</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    *{
+        background-color: rgb(33, 33, 33);
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
+    .main{
+        box-sizing: border-box;
+        /* margin-top: 50px; */
+        /* margin-left: 50%; */
+        margin-top: 50px;
+    }
+    .form_input_main{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .form_input_main .mainInput{
+        padding-top: 15px;
+        padding-left: 200px;
+        padding-bottom: 15px;
+        padding-right: 200px;
+        border-radius: 20px;
+        border: 1px solid rgb(99, 99, 99);
+        text-align: center;
+    }
+    .submit{
+        font-size: 14px;
+        color: white;
+        margin-top: 15px;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border: 1px solid grey;
+        border-radius: 5px;
+    }
+    .submit:hover{
+        cursor: pointer;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    li {
+        float: right;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+    }
+    .search-container {
+  display: flex;
+  flex-direction: column;
+  /* Align the search container in the center of the viewport */
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+.search-container .search-field {
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  border: 1px solid #afafaf;
+  align-items: center;
+  margin: 10px;
+  padding-left: 15px;
+}
+.search-container .search-field input {
+  border: none;
+  border-radius: 25px;
+}
+.search-container .logo-subtext {
+  color: #4285f4;
+  position: relative;
+  left: 110px;
+  top: -18px;
+}
+
+.advanced-search-container {
+  margin: 50px 40px;
+}
+.advanced-search-container label {
+  display: inline-block;
+  width: 16%;
+  font-size: 20px;
+}
+.advanced-search-container .whitespace {
+  display: inline-block;
+  width: 50%;
+}
+.advanced-search-container .form-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px 0;
+}
+.advanced-search-container .form-group label {
+  width: 16%;
+  font-size: 14px;
+}
+.advanced-search-container .form-group input[type=text] {
+  width: 49%;
+  padding: 2px 0;
+}
+.advanced-search-container .form-group .clarification {
+  font-size: 11px;
+  width: 30%;
+  margin-left: 1%;
+}
+.advanced-search-container .form-group .clarification .monospace {
+  font-family: monospace;
+}
+.advanced-search-container .form-group .right-align {
+  width: 50%;
+}
+.blue-button{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgb(92, 139, 214);
+    border: 2px solid grey;
+    border-radius: 3px;
+}
+.blue-button:hover{
+    background-color: rgb(35, 75, 139);
+}
+</style>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Normal Search</a></li>
+            <li><a href="imageSearch.html">Image Search</a></li>
+          </ul>
+    </div>
+    <div class="advanced-search-container">
+        <form action="https://www.google.com/search" method="get">
+            <label>Find pages with...</label>
+            <div class="whitespace"></div>
+            <!-- <label>To do this in the search box.</label> -->
+            <div class="form-group">
+                <label>All these words:</label>
+                <input type="text" name="as_q">
+                <div class="clarification">
+                    Type the important words: <span class="monospace">tri-colour rat terrier</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>This exact word or phrase:</label>
+                <input type="text" name="as_epq">
+                <div class="clarification">
+                    Put exact words in quotes: <span class="monospace">"rat terrier"</span>
+    </div>
+            </div>
+            <div class="form-group">
+                <label>Any of these words: </label>
+                <input type="text" name="as_oq">
+                <div class="clarification">
+                    Type OR between all the words you want: <span class="monospace">miniature OR standard</span>
+    </div>
+            </div>
+            <div class="form-group">
+                <label>None of these words:</label>
+                <input type="text" name="as_eq">
+                <div class="clarification">
+                    Put a minus sign just before words that you don't want: <span class="monospace">-rodent, -"Jack Russell"</span>
+    </div>
+            </div>
+            <div class="form-group">
+                <label></label>
+                <div class="right-align">
+                    <input type="submit" class="blue-button" value="Google Advanced Search">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
